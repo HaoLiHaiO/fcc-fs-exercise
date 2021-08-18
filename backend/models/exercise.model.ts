@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
 interface IExercise {
     username: string
@@ -16,6 +16,4 @@ const exerciseSchema = new Schema<IExercise>({
     timestamps: true,
 })
 
-const Exercise = mongoose.model('Exercise', exerciseSchema);
-
-module.exports = Exercise;
+export const Exercise = model<IExercise>('Exercise', exerciseSchema);

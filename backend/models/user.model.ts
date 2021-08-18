@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
 interface IUser {
     userName: string
@@ -16,6 +16,4 @@ const userSchema = new Schema<IUser>({
     timestamps: true,
 });
 
-const User = mongoose.model('User', userSchema);
-
-module.exports = User;
+export const User = model<IUser>('User', userSchema);
