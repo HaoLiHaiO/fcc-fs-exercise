@@ -9,3 +9,4 @@
 - bodyParser is deprecated, use new syntax with app.use(express.json())
 - temp add isolatedModule set to false to run the server without any export or 
 import
+- in TS, req and res types must be imported
