@@ -18,6 +18,7 @@ const userSchema = new Schema<IUser>({
         trim: true,
         minLength: 3
     },
+  }, {
     timestamps: true,
 });
 
