@@ -3,11 +3,7 @@ import { Schema } from "mongoose";
 interface IUser {
     userName: {
         type: string
-        unique: boolean
-        trim: boolean
-        minLength: number
     }
-    timestamps: boolean
 }
 
 const userSchema = new Schema<IUser>({
