@@ -1,9 +1,7 @@
 import { Schema } from "mongoose";
 
 interface IUser {
-    userName: {
-        type: string
-    }
+    userName: string
 }
 
 const userSchema = new Schema<IUser>({

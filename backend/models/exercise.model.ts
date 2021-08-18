@@ -1,10 +1,10 @@
 import { Schema } from "mongoose";
 
 interface IExercise {
-    username: { type: string }
-    description: { type: string }
-    duration: { type: number }
-    date: { type: Date }
+    username: string
+    description: string
+    duration: number
+    date: Date
 }
 
 const exerciseSchema = new Schema<IExercise>({
@@ -15,3 +15,7 @@ const exerciseSchema = new Schema<IExercise>({
   }, {
     timestamps: true,
 })
+
+const Exercise = mongoose.model('Exercise', exerciseSchema);
+
+module.exports = Exercise;
