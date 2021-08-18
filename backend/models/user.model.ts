@@ -1,6 +1,16 @@
 import { Schema } from "mongoose";
 
-const userSchema = new Schema({
+interface IUser {
+    userName: {
+        type: string
+        unique: boolean
+        trim: boolean
+        minLength: number
+    }
+    timestamps: boolean
+}
+
+const userSchema = new Schema<IUser>({
     userName: {
         type: String,
         required: true,
