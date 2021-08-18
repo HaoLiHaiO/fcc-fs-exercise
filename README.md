@@ -1,6 +1,8 @@
 # Freecodecamp MERN tutorial
 
-- goal: develop my backend skills
+My goal by following this tutorial is to improve my backend skills and 
+knowledge. I am also improving the code quality by adding Typescript and using 
+ES6 syntax.
 
 ## Notes
 
