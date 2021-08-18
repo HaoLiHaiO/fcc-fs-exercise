@@ -1,6 +1,9 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
+import express from 'express';
+import cors from 'cors';
+import mongoose from 'mongoose';
+
+import { exerciseRouter } from './routes/exercises';
+import { usersRouter } from './routes/users';
 
 require('dotenv').config();
 
@@ -16,9 +19,6 @@ const connection = mongoose.connection;
 connection.once('open', () => {
     console.log('Successfully connected to MongoDB database!');
 })
-
-const exerciseRouter = require('./routes/exercises');
-const usersRouter = require('./routes/users');
 
 app.use('/exercises', exerciseRouter);
 app.use('/users', usersRouter);
